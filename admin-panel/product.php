@@ -51,8 +51,19 @@
                 </nav>
                 <!-- Page content-->
                 <div class="container-fluid">
-                <div id="welcomeDiv"  style="display:none;" class="answer_list" > WELCOME</div>
-<input type="button" name="answer" value="Show Div" onclick="showDiv()" />
+                
+                <input type="button" name="answer" value="Show Div" onclick="ShowDiv()" />
+
+               
+                <div id="welcomeDiv"  style="display:none;" class="answer_list" >
+                          <ol>
+                          <li>India</li>
+                          <li>US</li>
+                          <li>UK</li>
+                          <li>Australia</li>
+                          </ol>
+                      </div>
+              
                 <table id="table" class="table align-middle mb-0 bg-white" data-show-columns="true">
                         <thead class="bg-light">
                             <tr>
@@ -62,7 +73,7 @@
                             <th>Actions</th>
                             </tr>
                         </thead>
-  <tbody>
+                        <tbody>
     <tr>
       <td>
         <div class="d-flex align-items-center">
@@ -129,6 +140,7 @@
    function showDiv() {
    document.getElementById('welcomeDiv').style.display = "block";
 }
+
 </script>
     </body>
 </html>
