@@ -5,7 +5,7 @@
 	$password='';
 	$db = 'aim';
 	
-	$conn = mysqli_connect($server,$user,$password,$db);
+	$conn = mysqli_connect($url,$username,$password,$db);
 
 	if(!$conn)
 	{
