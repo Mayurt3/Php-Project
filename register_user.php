@@ -26,16 +26,18 @@ $email = '';
 		echo 'Your passwords do not match., <a href="register_user.php">Refill here</a>';
 		exit();
 	}
-	$check_mobile = "SELECT id FROM customer WHERE mobile='$mobile' LIMIT 1";
+	$check_mobile = "SELECT id FROM sign_up WHERE mobile='$mobile' LIMIT 1";
 	$userMatch = mysqli_query($conn, $check_mobile);
 	//$userMatch = mysqli_num_rows($check_mobile); 
 	if (mysqli_num_rows($userMatch) > 0) {
 		//$reg_suc ='<div class="alert alert-danger">Sorry your mobile number is already registered into the system</div>';
-		echo 'Sorry your mobile number is already registered into the system, <a href="register_user.php">click here</a>';
-		exit();
+
+		echo '<div class="alert alert-danger">Sorry your mobile number is already registered into the system <a href="register_user.php">click here</a></div>';
+		exit;
+
 	}
 	
-	$check_email = "SELECT id FROM customer WHERE email='$email' LIMIT 1";
+	$check_email = "SELECT id FROM sign_up WHERE email='$email' LIMIT 1";
 	$emailcheck = mysqli_query($conn, $check_email);
 	//$userMatch = mysqli_num_rows($check_mobile); 
 	if (mysqli_num_rows($emailcheck) > 0) {
@@ -43,7 +45,7 @@ $email = '';
 		echo 'Sorry your Email is already registered into the system, <a href="register_user.php">click here</a>';
 		exit();
 	}
-	$sql = "INSERT INTO `customer`(`login`, `password`, `name`,`mobile`, `email`, `address`, `city`, `state`, `pin`, `confirmation_code`, `active`) VALUES ('$username','$password','$name','$mobile','$email','$address','$city','$state','$pin','$confirmation_code','')";
+	$sql = "INSERT INTO `sign_up`(`full_name`, `username`,`password`,`mobile`, `email`, `address`, `city`, `state`, `pin`, `verfiy_code`, `status`) VALUES ('$username','$password','$name','$mobile','$email','$address','$city','$state','$pin','$confirmation_code','')";
 			if (mysqli_query($conn, $sql))
 				{
 	

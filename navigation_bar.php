@@ -16,8 +16,8 @@
 <body>
 <div class="container"> 
    <div class="row">
-      <div class="col-md-5">
-	<a class="img-responsive logo" href="index.php"><img src="logo.png" /></a>
+      <div class="col-md-2">
+	<a class="img-responsive logo" href="index.php"><img width="200px" height="50px" src="logo.png" /></a>
       </div>
    </div>
 </div>

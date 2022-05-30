@@ -44,7 +44,7 @@ $rs_result = mysqli_query($conn, $sql);
 	  <div class="col-md-4">
 	
 	    <div class="thumbnail">
-	      <img src="<?php echo $item['thumb']; ?>" alt="<?php echo $item['title'] ?>">
+	      <img src="<?php echo $item['image']; ?>" alt="<?php echo $item['title'] ?>">
 	      <div class="caption">
 	        <h3><?php echo $item['product_name'] ?></h3>
 			 <p>Rs.<?php echo $item['price'] ?></p>
