@@ -1,15 +1,28 @@
- Request for change of broadband plan
- 
- 
-Hello,
+CREATE TABLE IF NOT EXISTS `sign_up` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `full_name` varchar(50) NOT NULL,
+ `username` varchar(50) NOT NULL,
+ `password` varchar(50) NOT NULL,
+ `c_password` varchar(50) NOT NULL,
+ `mobile` varchar(50) NOT NULL,
+ `email` varchar(50) NOT NULL,
+ `address` varchar(250) NOT NULL,
+ `city` varchar(250) NOT NULL,
+ `pin` varchar(250) NOT NULL,
+ `state` varchar(250) NOT NULL,
+ `verfiy_code` varchar(50) NOT NULL,
+ `status` varchar(15) NOT NULL,
+ `create_datetime` datetime NOT NULL,
+ PRIMARY KEY (`id`)
+);
 
-
-Greeting Of The Day
-
-
-I would like to inform you that As Per Talk on Telephonic to Change Our Hi-Speed internet Plan 30Mbps to 10Mbps (RS.12,500) And Stastic IP Set as Default in Previou Plan.
-And Also on Disccued 16th May 2022 Please Credit (RS.5000) in Next Bill Cycle.
-
-Thank You
-Mayur Talsaniya
-RKIT Software Pvt LTd.
+CREATE TABLE IF NOT EXISTS `products` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `product_name` varchar(50) NOT NULL,
+ `category_name`  varchar(50) NOT NULL,
+ `price` varchar(50) NOT NULL,
+ `details` varchar(50) NOT NULL,
+ `image` varchar(50) NOT NULL,
+ `create_datetime` datetime NOT NULL,
+ PRIMARY KEY (`id`)
+);
