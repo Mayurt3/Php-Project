@@ -1,12 +1,12 @@
 <?php
 
-	$server = 'localhost';
-	$user = 'mayur';
-	$password = 'manisht3';
-	$db = 'shop_demo';
+	$url='localhost';
+	$username='root';
+	$password='';
+	$db = 'aim';
 	
 	$conn = mysqli_connect($server,$user,$password,$db);
-	
+
 	if(!$conn)
 	{
 		die("Connection Failed :".mysqli_connect_error());
