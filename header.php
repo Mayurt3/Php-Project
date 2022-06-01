@@ -57,7 +57,7 @@
 			else
 			{
 				$cid = $_SESSION['user'];
-				$pid_sql = "SELECT * FROM `customer_cart` WHERE customr_id='$cid'";
+				$pid_sql = "SELECT * FROM `sign_up` WHERE id='$cid'";
 				$run_pid = mysqli_query($conn,$pid_sql);
 				
 				$rowcount=mysqli_num_rows($run_pid);

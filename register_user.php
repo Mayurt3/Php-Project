@@ -45,7 +45,8 @@ $email = '';
 		echo 'Sorry your Email is already registered into the system, <a href="register_user.php">click here</a>';
 		exit();
 	}
-	$sql = "INSERT INTO `sign_up`(`full_name`, `username`,`password`,`mobile`, `email`, `address`, `city`, `state`, `pin`, `verfiy_code`, `status`) VALUES ('$username','$password','$name','$mobile','$email','$address','$city','$state','$pin','$confirmation_code','')";
+	$sql = "INSERT INTO `sign_up`(`full_name`, `username`,`password`,`mobile`, `email`, `address`, `city`, `state`, `pin`, `verfiy_code`, `status`) 
+	VALUES ('$name','$username','$password','$mobile','$email','$address','$city','$state','$pin','$confirmation_code','')";
 			if (mysqli_query($conn, $sql))
 				{
 	

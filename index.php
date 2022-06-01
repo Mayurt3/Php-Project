@@ -44,7 +44,7 @@ $rs_result = mysqli_query($conn, $sql);
 	  <div class="col-md-4">
 	
 	    <div class="thumbnail">
-	      <img src="<?php echo $item['image']; ?>" alt="<?php echo $item['title'] ?>">
+	      <img src="<?php echo $item['image']; ?>" >
 	      <div class="caption">
 	        <h3><?php echo $item['product_name'] ?></h3>
 			 <p>Rs.<?php echo $item['price'] ?></p>
@@ -53,10 +53,13 @@ $rs_result = mysqli_query($conn, $sql);
 			if(isset($_SESSION['user']))
 			{
 			?>
-           <div class="overlay-content">
+        	<div class="overlay-content" style="button.css">
+				<button ><p><a href="addtocart.php?id=<?php echo $item['id']; ?>" class="btn btn-warning" role="button">Buy Now</a></p>	</button>
+  				<button ><p><a href="addtocart.php?id=<?php echo $item['id']; ?>" class="btn btn-primary" role="button">Add to Cart</a></p></button>
+            		
                                        
-             <p><a href="addtocart.php?id=<?php echo $item['id']; ?>" class="btn btn-primary" role="button">Add to Cart</a></p>
-             </div>
+           			 
+            </div>
 		<?php } ?>
 	        
 	      </div>

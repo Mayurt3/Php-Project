@@ -10,7 +10,7 @@ if (isset($_SESSION["user"])) {
 }
 	if (isset($_POST["username"]) && isset($_POST["password"])) {
 	
-	$active_id = "SELECT id FROM customer WHERE active='0'";
+	$active_id = "SELECT id FROM sign_up WHERE status='0'";
 	$userMatch = mysqli_query($conn, $active_id);
 	//$userMatch = mysqli_num_rows($check_mobile); 
 	if (mysqli_num_rows($userMatch) > 0) {
@@ -22,15 +22,15 @@ if (isset($_SESSION["user"])) {
 	$user = preg_replace('#[^A-Za-z0-9]#i', '', $_POST["username"]);
     $password = preg_replace('#[^A-Za-z0-9]#i', '', $_POST["password"]);
 
-    $sql = "SELECT id FROM customer WHERE login='$user' AND password='$password' LIMIT 1 "; 
+    $sql = "SELECT id FROM sign_up WHERE username='$user' AND password='$password' LIMIT 1 "; 
 	$exist = mysqli_query($conn, $sql);
    
 		if (mysqli_num_rows($exist) == 1) 
-		{ 
-	     while($row = mysqli_fetch_array($sql))
-		 { 
-           
-		 }
+		{
+			
+		
+
+	    
 		 $_SESSION["cid"] = $id;
 		 $_SESSION["user"] = $user;
 		 $_SESSION["password"] = $password;
